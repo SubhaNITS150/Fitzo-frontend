@@ -1,5 +1,14 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import { Mulish } from 'next/font/google';
+
+const mulish = Mulish({
+    weight: ['300', '400', '500', '600', '700', '800', '900'],
+    subsets: ['latin'],
+    display: 'swap'
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +27,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={mulish.className}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Header/>
         {children}
       </body>
     </html>
