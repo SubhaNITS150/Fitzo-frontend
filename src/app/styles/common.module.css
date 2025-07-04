@@ -26,14 +26,9 @@
     margin-bottom: 3.2rem;
 }
 
-.movie_title {
-    margin: 3.2rem 0 3.2rem 0;
-}
 
-.movie_title span{
-     color: #e50914;
-    text-transform: capitalize;
-}
+
+
 
 .card_section{
     width: 100%;
@@ -131,13 +126,3 @@
 
 
 
-@media screen and (max-width:768px) {
-    .grid_two_section{
-        grid-template-columns: 1fr;
-    }
-
-    .card_section{
-        justify-content: center;
-    }
-
-}
