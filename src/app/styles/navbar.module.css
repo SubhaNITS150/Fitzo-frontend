@@ -55,12 +55,13 @@
     transform: translateY(-50%);
     width: 100%;
     height: .5rem;
-    background-color: #e50914;
+    /* background-color: #e50914; */
     left: -100%;
 }
 
 .navbarItem a:hover:before {
     animation: coolNavLine .4s linear forwards;
+    
 }
 
 @keyframes coolNavLine {
@@ -79,8 +80,11 @@
     }
 }
 
-.navbarList .navbarItem a:hover{
-    color: #fff;
+.navbarList .navbarItem a:hover {
+    color: #ffffff;
+    background: radial-gradient(circle, rgb(23, 27, 167) 0%, rgb(64, 8, 112) 100%);
+    border-radius: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 

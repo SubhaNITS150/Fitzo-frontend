@@ -20,16 +20,16 @@ const Herosection = () => {
                        <p className={heroStyles.message}>Revolutionary 3D Fitting Technology</p>
                         <h1>Try Before You Buy With</h1>
                         <h1 className={heroStyles["gradient-text"]}>Fitzo</h1>
-                        <p>Experience the future of online shopping with our AI-powered 3D fitting technology.
+                        <p>Experience the future of online shopping with our AI-powered 3D fitting technology.<br/>
                         Upload your photo and see how clothes look on you in real-time environments.</p>
                         <div>
-                            <Link href="/try-on">
+                            <Link href="/try-on"  className={`${heroStyles.but} ${heroStyles.tryOnBtn}`}>
                              <button className={mulish.className}>
                                 Start virtual Try-On
                             </button></Link>
                             
-                            <Link href="/products">
-                             <button className={mulish.className}>
+                            <Link href="/products" className={heroStyles.but}>
+                             <button className={mulish.className}  > 
                                Browse Collection
                             </button></Link>
 
