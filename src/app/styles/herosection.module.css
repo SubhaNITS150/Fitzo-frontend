@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
 
-.main_section{
-    position: relative;
-  background: linear-gradient(to right, rgb(68, 1, 85) 0%, rgb(2, 31, 161) 50%, rgb(68, 1, 85) 100%);
-
-
-
-
-      /* background: linear-gradient(-45deg, rgb(56, 22, 131), rgb(15, 87, 169),rgb(7, 1, 30)); */
-
+.main_section {
+   
+    margin-top: 0;
+    padding-top: 0;
+ 
+    background: linear-gradient(
+        -45deg,
+        #161617 0%,
+        rgb(15, 87, 169) 50%,
+        rgb(7, 1, 30) 100%
+    );
     background-size: 400% 400%;
-   color: white;
-    /*animation: gradient-bg 20s ease infinite;*/
+    color: white;
 }
+
 
 
 /*@keyframes gradient-bg {*/
@@ -31,7 +33,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-height: 48rem;
+    min-height: 60rem;
     width: 100%;
     align-items: center;
 }
