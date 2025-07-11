@@ -16,22 +16,43 @@ const Herosection = () => {
         <main className={heroStyles.main_section}>
             <div className={styles.container}>
                     <div className={heroStyles.hero_content}>
-                        
-                       <p className={heroStyles.message}>Revolutionary 3D Fitting Technology</p>
-                        <h1>Try Before You Buy With</h1>
-                        <h1 className={heroStyles["gradient-text"]}>Fitzo</h1>
-                        <p>Experience the future of online shopping with our AI-powered 3D fitting technology.<br/>
-                        Upload your photo and see how clothes look on you in real-time environments.</p>
-                        <div>
-                            <Link href="/try-on"  className={`${heroStyles.but} ${heroStyles.tryOnBtn}`}>
-                             <button className={mulish.className}>
-                                Start virtual Try-On
-                            </button></Link>
+                        <div className={heroStyles.col1}>
+                        <div className={heroStyles.obj1}>
+
+                        </div>
+                        <div className={heroStyles.obj2}>
                             
-                            <Link href="/products" className={heroStyles.but}>
-                             <button className={mulish.className}  > 
-                               Browse Collection
-                            </button></Link>
+                        </div>
+                        <div className={heroStyles.obj3}>
+                            
+                        </div>
+                        </div>
+                        <div className={heroStyles.col2}>
+                            <div className={heroStyles.obj4}>
+
+                            </div>
+                            <div className={heroStyles.obj5}>
+                                <div className={heroStyles.obj5_1}>
+
+                                </div>
+                                <div className={heroStyles.obj5_2}>
+                                    
+                                </div>
+                            </div>
+                            <div className={heroStyles.obj6}>
+                                
+                            </div>
+                        </div>
+                        <div className={heroStyles.col3}>
+                            <div className={heroStyles.obj7}>
+                                
+                            </div>
+                            <div className={heroStyles.obj8}>
+                                
+                            </div>
+                            <div className={heroStyles.obj9}>
+                                
+                            </div>
 
                         </div>
                 </div>

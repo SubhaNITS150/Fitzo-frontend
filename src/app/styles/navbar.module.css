@@ -5,14 +5,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #161617;
+    background-color: #1336e7;
     border: none;
     outline: none;
     box-shadow: none;
 }
 
 .navbar{
-    background-color: #161617;
+    background-color: #1336e7;
 }
 
 
@@ -66,10 +66,52 @@
 
 .navbarList .navbarItem a:hover {
     color: #ffffff;
-    background: radial-gradient(circle, rgb(23, 27, 167) 0%, rgb(64, 8, 112) 100%);
+    background-color: #00164a;
     border-radius: 1rem;
+    padding: 2rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.headsearch{
+    height: 45px;
+    width: 650px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.input_search{
+    height: 100%;
+    width: 88%;
+    padding-left: 25px;
+    
+}
+
+:global(input) {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.icon_search{
+    height: 35px;
+    width: 35px;
+    background-color: #1359e7;
+    border-radius: 50%;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444444;
+    cursor: pointer;
+    color: #fff;
+}
+.icon_search span{
+    font-size: 2rem;
+}
+
 
 
 

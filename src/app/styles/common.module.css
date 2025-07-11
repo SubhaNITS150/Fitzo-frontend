@@ -9,10 +9,10 @@
 }
 
 .container{
-    max-width: 140rem;
-    margin:0 auto;
+    /* max-width: 140rem; */
+    /* margin:0 auto; */
     
-    padding: 6rem 3rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .grid_two_section{

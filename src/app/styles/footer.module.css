@@ -1,6 +1,6 @@
 .footer {
     height: 30rem;
-    background-color:  #161617;
+    background-color: #1336e7;
     color: #ffffff;
      width: 100%;
 }
@@ -29,7 +29,7 @@
 
 .box1 {
     margin-left: 1rem;
-    background-color: #161617;
+    background-color: #1336e7;
       flex: 1; 
       display: flex; 
       flex-direction: column; 
@@ -83,20 +83,20 @@
 }
 
 .footer a:hover {
-  color: #086d95;        
+  color: #e0e6e8;        
 }
 
 .divider {
   border: 0;                  /* remove default hr border */
   height: 1px;                /* thickness */
-  background-color: #444;     /* a subdued gray */
+  background-color: #fffcfc;     /* a subdued gray */
   margin: 2rem 4rem;  
      /* vertical spacing above/below */
 }
 
 .copy {
   text-align: center;
-  color: #777;
+  color: #f9eeee;
   font-size: 1.2rem;
   margin: 0;
   padding-bottom: 2rem;       /* bottom padding if you like */

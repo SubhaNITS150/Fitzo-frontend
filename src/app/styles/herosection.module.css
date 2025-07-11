@@ -4,15 +4,11 @@
    
     margin-top: 0;
     padding-top: 0;
+    background-color: #fefeff;
  
-    background: linear-gradient(
-        -45deg,
-        #161617 0%,
-        rgb(15, 87, 169) 50%,
-        rgb(7, 1, 30) 100%
-    );
     background-size: 400% 400%;
     color: white;
+
 }
 
 
@@ -30,59 +26,151 @@
 
 .hero_content{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    min-height: 60rem;
+    min-height: 80rem;
     width: 100%;
+    gap : 1.5rem;
     align-items: center;
 }
 
-.message{
-    height : 4rem;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    border-radius: 2rem;
-    width:32rem;
-    padding-left: 1rem;
-    padding-top: 0.7rem;
+.col1{
+
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap : 1.5rem;
+  
 }
 
-.gradient-text {
- background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* For Firefox */
-  color: transparent;
+
+
+.col2{
  
+  width: 100%;
+  flex:2;
+  display: flex;
+  flex-direction: column;
+  gap : 1.5rem;
+
+
+}
+.col3{
+ 
+  width: 100%;
+  flex:1;
+  display: flex;
+  gap : 1.5rem;
+  flex-direction: column;
+
+
 }
 
-.but {
-  margin-right: 4rem; /* Adds space to the right */
-  display: inline-block; /* Ensures they sit side by side */
+.col1,
+.col2,
+.col3 {
+  height: 120rem;  /* or any other height */
 }
 
-.tryOnBtn button {
-   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  color: white;
-  border: none;
+.obj1{
+  flex : 1;
+  background-image: url("/box2.png");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+
+  
+}
+.obj2{
+  flex : 2;
+  background-image: url("/box6.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
 }
 
-.tryOnBtn button:hover {
-  background: white;
-  color: black;
-}
-.hero_content h1{
-    text-transform:uppercase;
-    font-size: 4.8rem;
-    color: #ffffff;
+.obj3{
+  flex : 1;
+ 
+   border-radius: 1rem;
+   background-image: url("/box9.png");
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
 }
 
-.hero_content p{
-    margin: 2rem 0 4rem 0;
-    font-weight: 300;
-    letter-spacing: .05rem;
-    line-height: 1.65;
-    /*font-family: 'Mulish', sans-serif;*/
+.obj4 {
+  flex: 37;
+
+    background-image: url("/box3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
 }
+
+.obj5 {
+  flex : 40;
+    
+    display: flex;
+    gap : 1.5rem;
+}
+
+.obj5_1 {
+  flex : 1;
+   background-image: url("/box7.png");
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+
+.obj5_2 {
+  flex : 1;
+  background-image: url("/box8.png");
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+   border-radius: 1rem;
+}
+.obj6 {
+  flex : 23;
+    background-image: url("/box10.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+
+.obj7 {
+  flex : 2.2;
+  background-image: url("/box4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+.obj8 {
+  flex : 2.2;
+   background-image: url("/box5.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+.obj9 {
+  flex : 5.4;
+   background-image: url("/box1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+}
+
 
 

@@ -9,9 +9,9 @@ const Footer = () => {
                 <div className={styles.info}>
                     <div className={styles.box1}>
                         <Link href="/">
-                    <Image src="/logo.png" alt="my logo image" width={150} height={50}/>
+                    <Image src="/logo.svg" alt="my logo image" width={50} height={45}/>
                 </Link>
-                <p style={{ color: "rgb(223, 210, 210)" }}>Revolutionary 3D fitting technology for mordern the shopper</p>
+                <p style={{ color: "rgb(223, 210, 210)" }}>Powered by the spirit of Walmart. Save Money. Live Better.</p>
                     </div>
                     <div className={styles.box2}>
                         <h3 style={{ fontSize: "2rem" , margin: "2rem"}} >Products</h3>
