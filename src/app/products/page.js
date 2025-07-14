@@ -91,7 +91,7 @@ export default function Products() {
     console.log({ showMarkUp, showTopBrands, showTrends });
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <div className={styles.loadContainer}><p className={styles.loader}> </p></div> ;
   if (error)   return <p>{error}</p>;
 
   return (

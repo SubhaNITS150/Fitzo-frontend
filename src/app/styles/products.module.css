@@ -146,6 +146,25 @@
 .tab1 button:hover,
 .tab2 button:hover,
 .tab3 button:hover {
-  background-color: #0f2fc0; /* Darker blue on hover */
+  background-color: #0f2fc0; 
 }
 
+
+
+.loadContainer {
+  height: 60rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
