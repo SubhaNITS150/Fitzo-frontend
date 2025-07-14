@@ -1,48 +1,42 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import axiosInstance from "@/utils/axiosInstance";
 import styles from "@/app/styles/products.module.css";
-import Link from "next/link";
+import { useCart } from "@/context/CartContext";
 
 export default function Products() {
-  const [products, setProducts]           = useState([]);
-  const [mergedProducts, setMergedProducts] = useState([]);  
-  const [loading, setLoading]             = useState(true);
-  const [error, setError]                 = useState("");
+  const [mergedProducts, setMergedProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const { addToCart } = useCart();
+  const router = useRouter();
 
   useEffect(() => {
     const fetchWithBrands = async () => {
       try {
-
         const prodRes = await axiosInstance.get("/product");
-        const prods   = prodRes.data;
+        const prods = prodRes.data.slice(0, 20);
 
-        const arr = [];
-        for (let i = 0; i < prods.length; i++) {
-          const p = prods[i];
-          try {
-            const brandRes = await axiosInstance.get(`/brand/${p.brandId}`);
-            const brand    = brandRes.data;
-            arr.push({
-              ...p,
-              brandName:  brand.name,
-              brandValue: brand.brandValue,
-            });
-          } catch {
-            arr.push({
-              ...p,
-              brandName:  "Unknown",
-              brandValue: null,
-            });
-          }
-        }
+        const arr = await Promise.all(
+          prods.map(async (p) => {
+            try {
+              const brandRes = await axiosInstance.get(`/brand/${p.brandId}`);
+              return {
+                ...p,
+                brandName: brandRes.data.name,
+                brandValue: brandRes.data.brandValue,
+              };
+            } catch {
+              return { ...p, brandName: "Unknown", brandValue: null };
+            }
+          })
+        );
 
         setMergedProducts(arr);
-        setMergedProducts(arr.slice(0, 20));
       } catch (err) {
-        console.error("Error loading products:", err);
-        setError("Could not load products");
+        setError("Failed to load products");
       } finally {
         setLoading(false);
       }
@@ -51,8 +45,8 @@ export default function Products() {
     fetchWithBrands();
   }, []);
 
-  if (loading) return <p>Loading…</p>;
-  if (error)   return <p>{error}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
 
   return (
     <div className={styles.container}>
@@ -74,25 +68,39 @@ export default function Products() {
             
           </div>
         </div>
+
       <h2 className={styles.heading}>All Products</h2>
       <div className={styles.grid}>
         {mergedProducts.map((p) => (
-          <div className={styles.card} key={p.id}>
+          <div
+            key={p.id}
+            className={styles.card}
+            style={{ cursor: "pointer" }}
+            onClick={() => router.push(`/products/${p.id}`)}
+          >
+            {/* CARD CONTENT */}
             <img src={p.imageUrl} alt={p.name} />
             <h3>{p.name}</h3>
             <p style={{ color: "green" }}>Now ₹{p.price}</p>
             <p style={{ color: "blue" }}>{p.discount}% OFF!</p>
             <p style={{ color: "black" }}>Brand: {p.brandName}</p>
             <p style={{ color: "black" }}>
-              Brand Value: {p.brandValue != null
+              Brand Value:{" "}
+              {p.brandValue != null
                 ? `${p.brandValue.toLocaleString()}`
                 : "N/A"}
             </p>
-            <Link href="#">
-              <button style={{ backgroundColor: "#1336e7" }}>
-                Add To Cart
-              </button>
-            </Link>
+
+            {/* ADD TO CART BUTTON */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();   // prevent the card’s onClick
+                addToCart(p);
+              }}
+              style={{ backgroundColor: "#1336e7" }}
+            >
+              Add To Cart
+            </button>
           </div>
         ))}
       </div>
