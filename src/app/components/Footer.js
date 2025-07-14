@@ -41,7 +41,7 @@ const Footer = () => {
                 </div>
                 <div className={styles.last}>
                       <hr className={styles.divider} />
-                       <p className={styles.copy}>© 2025 Fitzo. All rights reserved.</p>
+                       <p className={styles.copy}>© 2025 Walmart. All rights reserved.</p>
                 </div>
             </div>
         </footer>
