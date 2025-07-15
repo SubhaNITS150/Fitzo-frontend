@@ -96,13 +96,7 @@
     
 }
 
-:global(input) {
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-}
+
 .icon_search{
     height: 35px;
     width: 35px;
